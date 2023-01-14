@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="css/xinhaicheng.css" />
+    <link rel="stylesheet" href="css/realnav2.css" />
+    <title>新海诚</title>
+  </head>
+  <body>
+    <div class="shell-main">
+      <div class="shell-main-nav">
+        <div class="logo">
+          <img src="img/hyy.jpg" alt="找不到啦" />
+          <span>小胡的期末作业</span>
+        </div>
+        <ul>
+          <li><a href="./index.html">新海诚</a></li>
+          <li><a href="./图片小展.html">图片小展</a></li>
+          <li><a href="./国王排名.html">国王排名</a></li>
+          <li><a href="longmao.html">龙猫</a></li>
+          <li class="dropdown">
+            <a href="">More</a>
+            <div class="dropdown-content">
+              <a href="./login.html">登录</a>
+              <a href="./baogao.html">报告</a>
+              <a href="https://y.qq.com/?ADTAG=myqq#type=index">主题曲</a>
+            </div>
+          </li>
+          <div class="nav-box"></div>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <div id="tab">
+        <div id="tabNav">
+          <p><strong>最新作品</strong></p>
+          <ul>
+            <li class="active">你的名字</li>
+            <li>天气之子</li>
+            <li>铃芽户缔</li>
+          </ul>
+        </div>
+        <div id="main">
+          <div class="item show">
+            <div class="main-zuixin">
+              <div class="zuixin-left">
+                <img src="img3/mingzi1.gif" />
+                <a href="https://baike.so.com/doc/24213960-24843047.html"
+                  >《你的名字》</a
+                >
+              </div>
+              <div class="zuixin-right">
+                <div class="zuixin-right1">
+                  <div>
+                    <img src="img3/sanye.gif" />
+                    <a href="#">宫水三叶</a>
+                  </div>
+                  <div>
+                    <img src="img3/long.gif" />
+                    <a href="#">立花泷</a>
+                  </div>
+                </div>
+                <div class="zuixin-right2">
+                  <div>
+                    <img src="img3/siye.jpg" />
+                    <a href="#">宫水四叶</a>
+                  </div>
+                  <div>
+                    <img src="img3/chishi.jpg" />
+                    <a href="#">敕使河原克彦</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="zuixin-left">
+              <img src="img3/zhizi.gif" />
+              <a href="http://www.360kan.com/m/gaTmYRH5Rnb8Th.html"
+                >《天气之子》</a
+              >
+            </div>
+            <div class="zuixin-right">
+              <div class="zuixin-right1">
+                <div>
+                  <img src="img3/nvzhu1.gif" />
+                  <a href="#">天野阳菜</a>
+                </div>
+                <div>
+                  <img src="img3/nanzhu1.gif" />
+                  <a href="#">森岛帆高</a>
+                </div>
+              </div>
+              <div class="zuixin-right2">
+                <div>
+                  <img src="img3/nver1.png" />
+                  <a href="#">须贺夏美</a>
+                </div>
+                <div>
+                  <img src="img3/naner.jpg" />
+                  <a href="#">须贺圭介</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="zuixin-left">
+              <img src="img3/yadi.jpeg" />
+              <a href="https://v-wb.youku.com/v_play/id_XNTg2MjMyMzI3Ng==.html"
+                >《铃芽户缔》</a
+              >
+            </div>
+            <div class="zuixin-right">
+              <div class="zuixin-right1">
+                <div>
+                  <img src="img3/nanzhu.jpeg" />
+                  <a href="#">宗像草太</a>
+                </div>
+                <div>
+                  <img src="img3/nver.jpeg" />
+                  <a href="#">岩户环</a>
+                </div>
+              </div>
+              <div class="zuixin-right2">
+                <div>
+                  <img src="img3/naner1.jpeg" />
+                  <a href="#">冈部稔</a>
+                </div>
+                <div>
+                  <img src="img3/nvzhu.jpeg" />
+                  <a href="#">岩户铃芽</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script>
+        let tabName = document.querySelector("#tabNav");
+        let lis = tabName.querySelectorAll("li");
+        let items = document.querySelectorAll(".item");
+        for (let i = 0; i < lis.length; i++) {
+          lis[i].onclick = function () {
+            lis.forEach((value) => {
+              value.className = "";
+            });
+            lis[i].className = "active";
+            items.forEach((value) => {
+              value.className = "item";
+            });
+            items[i].className = "item show";
+          };
+        }
+      </script>
+
+      <div class="tableft">
+        <div class="tableft-list">
+          <h3>喜爱排行榜</h3>
+        </div>
+        <hr size="1" color="#A2A2A2" />
+        <div class="tableft-list">
+          <p style="font-size: 20px"><i>1 </i></p>
+          <a href="https://baike.so.com/doc/24213960-24843047.html"
+            >《你的名字》</a
+          >
+        </div>
+        <div class="tableft-list">
+          <p style="font-size: 20px"><i>2 </i></p>
+          <a href="http://www.360kan.com/m/gaTmYRH5Rnb8Th.html">《天气之子》</a>
+        </div>
+        <div class="tableft-list">
+          <p style="font-size: 20px"><i>3 </i></p>
+          <a href="https://v-wb.youku.com/v_play/id_XNTg2MjMyMzI3Ng==.html"
+            >《铃芽户缔》</a
+          >
+        </div>
+        <div class="tableft-list">
+          <p style="font-size: 20px"><i>4 </i></p>
+          <a href="https://www.360kan.com/ct/P04mbZ7kLICwDD.html"
+            >《秒速五厘米》</a
+          >
+        </div>
+        <div class="tableft-list">
+          <p style="font-size: 20px"><i>5 </i></p>
+          <a href="https://baike.so.com/doc/5477813-5715725.html"
+            >《云之彼端》</a
+          >
+        </div>
+      </div>
+
+      <div class="tabdown">
+        <a href="#"
+          ><h1><br />经典作品</h1></a
+        >
+        <ul>
+          <li>
+            <img src="img3/mingzi.jpg" alt="" />
+            <div>
+              <a href="https://baike.so.com/doc/24213960-24843047.html"
+                >你的名字</a
+              >
+            </div>
+          </li>
+          <li>
+            <img src="img3/tianqi2.jpg" alt="" />
+            <div>
+              <a href="http://www.360kan.com/m/gaTmYRH5Rnb8Th.html">天气之子</a>
+            </div>
+          </li>
+          <li>
+            <img src="img3/linya.jpg" alt="" />
+            <div>
+              <a href="https://v-wb.youku.com/v_play/id_XNTg2MjMyMzI3Ng==.html"
+                >铃芽户缔</a
+              >
+            </div>
+          </li>
+          <li>
+            <img src="img3/biduan.jpg" alt="" />
+            <div>
+              <a href="https://baike.so.com/doc/5477813-5715725.html"
+                >云的彼端</a
+              >
+            </div>
+          </li>
+          <li>
+            <img src="img3/miaosu.jpg" alt="" />
+            <div>
+              <a href="https://www.360kan.com/ct/P04mbZ7kLICwDD.html"
+                >秒速五厘米</a
+              >
+            </div>
+          </li>
+          <li>
+            <img src="img3/yanye.jpg" alt="" />
+            <div>
+              <a href="https://baike.so.com/doc/5415996-5654141.html"
+                >言叶之庭</a
+              >
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="tabdown">
+        <a href="#"
+          ><br /><br /><br />
+          <h1>其他喜爱</h1></a
+        >
+        <ul>
+          <li>
+            <img src="img3/shizi2.jpg" alt="" />
+            <div><a href="#">十字路口</a></div>
+          </li>
+          <li>
+            <img src="img3/qianxun.jpg" alt="" />
+            <div><a href="#">千与千寻</a></div>
+          </li>
+          <li>
+            <img src="img3/haer.jpg" alt="" />
+            <div><a href="#">哈尔的移动城堡</a></div>
+          </li>
+          <li>
+            <img src="img3/boniu.jpg" alt="" />
+            <div><a href="#">悬崖上的金鱼姬</a></div>
+          </li>
+          <li>
+            <img src="img3/xiamu.jpg" alt="" />
+            <div><a href="#">夏目友人帐</a></div>
+          </li>
+          <li>
+            <img src="img3/yinghuo.jpg" alt="" />
+            <div><a href="#">萤火之森</a></div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

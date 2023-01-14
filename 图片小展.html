@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/realnav2.css" />
+    <link rel="stylesheet" href="css/lunbo.css" />
+    <title>治愈空间</title>
+  </head>
+  <body>
+    <div class="shell-main">
+      <div class="shell-main-nav">
+        <div class="logo">
+          <img src="img/hyy.jpg" alt="找不到啦" />
+          <span>小胡的期末作业</span>
+        </div>
+        <ul>
+          <li><a href="./index.html">新海诚</a></li>
+          <li><a href="./图片小展.html">图片小展</a></li>
+          <li><a href="./国王排名.html">国王排名</a></li>
+          <li><a href="longmao.html">龙猫</a></li>
+          <li class="dropdown">
+            <a href="">More</a>
+            <div class="dropdown-content">
+              <a href="./login.html">登录</a>
+              <a href="./baogao.html">报告</a>
+              <a href="https://y.qq.com/?ADTAG=myqq#type=index">主题曲</a>
+            </div>
+          </li>
+          <div class="nav-box"></div>
+        </ul>
+      </div>
+    </div>
+    <div class="a">
+      <div class="b"></div>
+      <div class="c">
+        <div class="d dd"><img src="1.jpg" alt="" /></div>
+        <div class="d"><img src="2.jpg" alt="" /></div>
+        <div class="d"><img src="3.jpg" alt="" /></div>
+        <div class="d"><img src="4.jpg" alt="" /></div>
+        <div class="d"><img src="5.jpg" alt="" /></div>
+      </div>
+    </div>
+    <script>
+      let b = document.querySelector(".b");
+      let d = document.getElementsByClassName("d");
+
+      let time;
+      let index = 0;
+
+      let a = function () {
+        for (let i = 0; i < d.length; i++) {
+          d[i].className = "d";
+        }
+      };
+      let aa = function () {
+        a();
+        d[index].className = "d dd";
+      };
+      function ts() {
+        time = setInterval(function () {
+          aa();
+          index++;
+          b.style.backgroundImage = "url('" + [index] + ".jpg')";
+          if (index == 5) {
+            index = 0;
+          }
+        }, 1500);
+      }
+      for (let i = 0; i < d.length; i++) {
+        d[i].onmousemove = function () {
+          b.style.backgroundImage = "url('" + [i + 1] + ".jpg')";
+          a();
+          clearInterval(time);
+          index = i + 1;
+          ts();
+        };
+      }
+      ts();
+    </script>
+  </body>
+</html>
